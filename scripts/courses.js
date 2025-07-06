@@ -78,65 +78,46 @@ const courses = [
     }
 ];
 
-// ********* DOM Elements *********
-const listContainer = document.querySelector('.courses-approved');            // where the tags will appear
-const totalMsg      = document.createElement('p');                        // text with the total
-
-totalMsg.className = 'courses-count';
-totalMsg.style.textAlign = 'center';
-totalMsg.style.marginTop = '1rem';
+// ========= DOM =========
+const listContainer = document.querySelector('.courses-approved'); // contenedor de etiquetas
+const totalMsg      = document.createElement('p');
+totalMsg.classList.add('courses-count');          // ← solo clase
 listContainer.parentElement.insertBefore(totalMsg, listContainer);
 
+// ========= Botones =========
 const btnAll = document.getElementById('all');
 const btnWDD = document.getElementById('wdd');
 const btnCSE = document.getElementById('cse');
 
-// ********* Main function *********
+// ========= Lógica =========
 function displayApprovedCourses(filter = 'All') {
-    listContainer.innerHTML = '';
+  listContainer.innerHTML = '';
 
-    // 1️⃣ Filter only approved courses
-    let approved = courses.filter(c => c.completed);
+  // 1. cursos aprobados
+  let approved = courses.filter(c => c.completed);
 
-    // 2️⃣ Filter by subject, if applicable
-    if (filter !== 'All') {
-        approved = approved.filter(c => c.subject === filter);
-    }
+  // 2. filtro por materia
+  if (filter !== 'All') approved = approved.filter(c => c.subject === filter);
 
-    // 3️⃣ Show the total
-    totalMsg.textContent = `The total number of approved courses listed below is ${approved.length}`;
+  // 3. total
+  totalMsg.textContent =
+    `The total number of approved courses listed below is ${approved.length}`;
 
-    // 4️⃣ Create a tag for each course
-    approved.forEach(course => {
-        const tag = document.createElement('span');
-        tag.textContent = `${course.subject} ${course.number}`;
-        tag.className = 'course-tag';
-        listContainer.appendChild(tag);
-    });
+  // 4. etiquetas
+  approved.forEach(({ subject, number }) => {
+    const tag = document.createElement('span');
+    tag.textContent = `${subject} ${number}`;
+    tag.classList.add('course-tag');              // ← solo clase
+    listContainer.appendChild(tag);
+  });
 }
 
-// ********* Add listeners *********
+// ========= Listeners =========
 btnAll.addEventListener('click', () => displayApprovedCourses('All'));
 btnWDD.addEventListener('click', () => displayApprovedCourses('WDD'));
 btnCSE.addEventListener('click', () => displayApprovedCourses('CSE'));
 
-// ********* Quick styles for the tags *********
-const style = document.createElement('style');
-style.textContent = `
-    .course-tag {
-        display: inline-block;
-        background-color: green;
-        color: var(--color-white);
-        padding: 0.5rem 1rem;
-        margin: 0.25rem;
-        border-radius: 10px;
-        font-weight: 600;
-    }
-`;
-document.head.appendChild(style);
-
-// Do not load results by default; show an initial message
+// ========= Mensaje inicial =========
 window.addEventListener('DOMContentLoaded', () => {
-    totalMsg.textContent = 'Select a button to view your approved courses.';
+  totalMsg.textContent = 'Select a button to view your approved courses.';
 });
-

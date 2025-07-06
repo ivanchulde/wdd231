@@ -272,38 +272,19 @@ section p {
     width: 100px;
 }
 
-
-/*-------------Buttons For Courses-----------------*/
-.course-item {
-  flex: 1 1 30%;
-  border: 2px solid var(--color-primary);
-  background-color: var(--color-white);
-  padding: 1rem;
-  border-radius: 15px;
-  box-shadow: 0 2px 6px rgba(13, 27, 42, 0.15);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.course-item.completed {
-  background-color: var(--color-accent);
-  color: var(--color-white);
-  border-color: var(--color-accent);
-}
-
-.course-item.completed h3,
-.course-item.completed p {
-  color: var(--color-white);
-}
-
-/* Ajusta el contenedor para que se adapte a flex-wrap */
-.courses-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+.courses-count {
+  text-align: center;
   margin-top: 1rem;
-  justify-content: space-between;
+  font-weight: 600;
+}
+
+.course-tag {
+  display: inline-block;
+  background-color: green;
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border-radius: 10px;
+  font-weight: 600;
 }
 
