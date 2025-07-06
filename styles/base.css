@@ -48,6 +48,11 @@ header img {
     border-radius: 50%;
 }
 
+#logo {
+  max-width: 150px;
+  height: auto;
+}
+
 header span {
     color: var(--color-white);
     font-size: 1.5rem;
@@ -187,6 +192,7 @@ header span {
 /*-----------MAIN STYLES-----------*/
 
 .container {
+    margin-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
