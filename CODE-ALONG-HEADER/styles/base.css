@@ -1,0 +1,73 @@
+:root {
+    --color-primary: #0D1B2A;
+    /* Header and footer */
+    --color-secondary: #778DA9;
+    /* Secondary elements */
+    --color-accent: #415A77;
+    /* Navigation */
+    --color-background: #E0E1DD;
+    /* Body background */
+    --color-white: #FFFFFF;
+    /* Text in header/footer */
+    --color-hover: #bbb;
+    /* Hover background */
+    --color-hover-text: #333;
+    /* Hover text */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+/*---------BODY STYLES-----------*/
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/*---------HEADER STYLES-----------*/
+header {
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-columns: 50px auto 30px;
+    column-gap: 8px;
+    padding: 5px 5px 10px 10px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+header span {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+    font-size: 2rem;
+}
+
+#menu.open::before {
+    content: "X";
+    font-size: 2rem;
+    color: white;
+}
