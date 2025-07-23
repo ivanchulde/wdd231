@@ -84,10 +84,17 @@ header span {
     grid-column: 2;
     justify-content: space-around;
     list-style: none;
+    background-color: var(--color-fifth);
     color: #fff;
 }
 
-.navigation a {
+.navigation li {
+    margin: 1rem;
+    padding: 0;
+}
+
+
+.navigation a  {
     display: none;
     padding: 1rem;
     text-align: center;
@@ -153,17 +160,18 @@ header span {
 
 .footer-social {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    align-items: center;
 }
 
-.footer-social a {
-    color: var(--color-white);
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+.footer-social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
 }
 
-.footer-social a:hover {
-    color: var(--color-secondary);
+.footer-social a:hover img {
+    transform: scale(1.1);
 }
 
 .footer-bottom {
