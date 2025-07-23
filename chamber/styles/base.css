@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
 :root {
     --color-primary: #0D1B2A;
     /* Header and footer */
@@ -14,8 +16,6 @@
     --color-hover-text: #333;
     /* Hover text */
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
 
 
 * {
@@ -207,24 +207,24 @@ main {
 }
 
 .menu {
-	margin: 1rem auto;
-	padding: 0.5rem;
-	text-align: center;
-
-	button {
-		padding: 0.5rem 2rem;
-        background-color: var(--color-accent);
-		font-weight: 700;
-        color: var(--color-white);
-        border: none;
-        border-radius: 15px;
-	}
-
-    button:hover {
-    transform: scale(1.02);
-    background-color: var(--color-hover);
-    color: var(--color-hover-text);
+  margin: 1rem auto;
+  padding: 0.5rem;
+  text-align: center;
 }
+
+.menu button {
+  padding: 0.5rem 2rem;
+  background-color: var(--color-accent);
+  font-weight: 700;
+  color: var(--color-white);
+  border: none;
+  border-radius: 15px;
+}
+
+.menu button:hover {
+  transform: scale(1.02);
+  background-color: var(--color-hover);
+  color: var(--color-hover-text);
 }
 
 /*---------INDIVIDUAL CARD STYLES-----------*/
@@ -275,32 +275,32 @@ main {
 #cards.list {
 	display: flex;
 	flex-direction: column;
+}
 
-	section {
+#cards.list section {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		margin: 0;
 		padding: 0.25rem;
         align-items: center;
-
-		& > * {
-			margin: 0 1.5rem;
-		}
-
-		img {
-			display: none;
-		}
-
-		h2 {
-			font-size: 1.5rem;
-		}
-
-		&:nth-child(even) {
-			background-color: #bbb;
-		}
-	}
 }
 
+#cards.list section > * {
+  margin: 0 1.5rem;
+}
+
+#cards.list section img {
+  display: none;
+}
+
+#cards.list section h2 {
+  font-size: 1.5rem;
+}
+
+#cards.list section:nth-child(even) {
+  background-color: #bbb;
+}
+	
 .card {
   padding: 1rem;
   background-color: #fff;
