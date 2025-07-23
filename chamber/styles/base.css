@@ -1,0 +1,310 @@
+:root {
+    --color-primary: #0D1B2A;
+    /* Header and footer */
+    --color-secondary: #778DA9;
+    /* Secondary elements */
+    --color-accent: #415A77;
+    /* Navigation */
+    --color-background: #E0E1DD;
+    /* Body background */
+    --color-white: #FFFFFF;
+    /* Text in header/footer */
+    --color-hover: #bbb;
+    /* Hover background */
+    --color-hover-text: #333;
+    /* Hover text */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+/*---------BODY STYLES-----------*/
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/*---------HEADER STYLES-----------*/
+header {
+    background-color: var(--color-primary);
+    display: grid;
+    grid-template-columns: 50px auto 30px;
+    column-gap: 8px;
+    padding: 5px 5px 10px 10px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+header img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+#logo {
+  max-width: 150px;
+  height: auto;
+}
+
+header span {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+#menu {
+    background: none;
+    border: none;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "☰";
+    color: white;
+    font-size: 2rem;
+}
+
+#menu.open::before {
+    content: "X";
+    font-size: 2rem;
+    color: white;
+}
+
+.navigation {
+    grid-column: 2;
+    justify-content: space-around;
+    list-style: none;
+    background-color: var(--color-fifth);
+    color: #fff;
+}
+
+.navigation a {
+    display: none;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+    display: block;
+}
+
+/*-----------FOOTER STYLES-----------*/
+.modern-footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 2rem 1rem;
+    font-size: 0.9rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+}
+
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+    font-size: 16px;
+    
+}
+
+.footer-links a {
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-links a:hover {
+    background-color: #bbb;
+    color: #333;
+    font-weight: 700;
+}
+
+.footer-social {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-social a {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--color-secondary);
+}
+
+.footer-bottom {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.footer-policies {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-policies a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.footer-policies a:hover {
+    text-decoration: underline;
+}
+
+
+/*-----------MAIN STYLES-----------*/
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--color-background);
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.menu {
+	margin: 1rem auto;
+	padding: 0.5rem;
+	text-align: center;
+
+	button {
+		padding: 0.5rem 2rem;
+        background-color: var(--color-accent);
+		font-weight: 700;
+        color: var(--color-white);
+        border: none;
+        border-radius: 15px;
+	}
+
+    button:hover {
+    transform: scale(1.02);
+    background-color: var(--color-hover);
+    color: var(--color-hover-text);
+}
+}
+
+/*---------INDIVIDUAL CARD STYLES-----------*/
+
+#cards section {
+    background-color: var(--color-accent);
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#cards section:hover {
+    transform: scale(1.02);
+    background-color: var(--color-hover);
+    color: var(--color-hover-text);
+}
+
+#cards p {
+    margin-bottom: 10px;
+	font-size: smaller;
+	text-align: center;
+    color: var(--color-white);
+    margin-top: 0.5rem;
+}
+
+#cards h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+#cards img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/*---------LIST STYLES-----------*/
+#cards.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+#cards.list {
+	display: flex;
+	flex-direction: column;
+
+	section {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		margin: 0;
+		padding: 0.25rem;
+        align-items: center;
+
+		& > * {
+			margin: 0 1.5rem;
+		}
+
+		img {
+			display: none;
+		}
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		&:nth-child(even) {
+			background-color: #bbb;
+		}
+	}
+}
+
+.card {
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

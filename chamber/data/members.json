@@ -1,0 +1,103 @@
+{
+  "companies": [
+    {
+      "name": "OSCUS S.A.",
+      "address": "Lalama entre Sucre y Bolívar, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-245-0101",
+      "website": "https://oscus.coop/",
+      "image": "images/oscus-logo.png",
+      "membershipLevel": 3,
+      "industry": "Finanzas",
+      "email": "info@oscus.coop",
+      "description": "Cooperativa de ahorro y crédito con más de 60 años de servicio en Ambato."
+    },
+    {
+      "name": "CACPE Pastaza",
+      "address": "Av. Huachi Chico y José Peralta, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-23-965091",
+      "website": "https://www.cacpepas.fin.ec/",
+      "image": "images/cacpe-logo.png",
+      "membershipLevel": 2,
+      "industry": "Finanzas",
+      "email": "support@cacpepas.fin.ec",
+      "description": "Cooperativa de ahorro y crédito con varias agencias en la región, incluyendo Ambato."
+    },
+    {
+      "name": "IDC Mayoristas en Computación",
+      "address": "12 de Noviembre y Juan Benigno Vela, Centro, Ambato, Ecuador",
+      "phone": "+593-98-830-8886",
+      "website": "https://www.idcmayoristas.com",
+      "image": "images/idc-logo.svg",
+      "membershipLevel": 1,
+      "industry": "Electrónica",
+      "email": "contact@idcmayoristas.com",
+      "description": "Importador y distribuidor mayorista de tecnología con sucursal en Ambato." 
+    },
+    {
+      "name": "QualityUP Preuniversitario",
+      "address": "Av. Cevallos y Montalvo, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-245-6789",
+      "website": "https://qualityup.com.ec/",
+      "image": "images/qualityup-logo.svg",
+      "membershipLevel": 3,
+      "industry": "Educación",
+      "email": "info@qualityup.ec",
+      "description": "Centro preuniversitario para estudiantes de Tungurahua."
+    },
+    {
+      "name": "Icono Sistemas",
+      "address": "Luis Cordero y Mera, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-244-1122",
+      "website": "https://iconosistemas.com.ec/portal/",
+      "image": "images/icono-logo.png",
+      "membershipLevel": 2,
+      "industry": "Sistemas",
+      "email": "ventas@iconosistemas.ec",
+      "description": "Servicios y soluciones en sistemas y telecomunicaciones para empresas."
+    },
+    {
+      "name": "FULL TEC S.A.",
+      "address": "Av. Cevallos y Montalvo, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-245-3333",
+      "website": "https://fulltec.com.ec/",
+      "image": "images/fulltec-logo.png",
+      "membershipLevel": 1,
+      "industry": "Tecnología",
+      "email": "contacto@fulltec.ec",
+      "description": "Empresa de tecnología y soporte IT en Ambato."
+    },
+    {
+      "name": "INGE AUTO",
+      "address": "Av. Cevallos y 12 de Noviembre, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-244-5566",
+      "website": "https://ingeauto.ec/",
+      "image": "images/ingeauto-logo.png",
+      "membershipLevel": 3,
+      "industry": "Automotriz",
+      "email": "info@ingeauto.ec",
+      "description": "Distribuidor y taller de repuestos automotrices en Ambato."
+    },
+    {
+      "name": "Mushuch Runa Cooperativa",
+      "address": "Av. Cevallos y Montalvo, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-244-7788",
+      "website": "https://mushucruna.com/",
+      "image": "images/mushucruna.png",
+      "membershipLevel": 2,
+      "industry": "Finanzas",
+      "email": "contact@mushucruna.com",
+      "description": "Cooperativa de ahorro centrada en la comunidad kichwa de Tungurahua."
+    },
+    {
+      "name": "CELITE Unidad Educativa",
+      "address": "Av. Cevallos y 12 de Noviembre, Ambato, Tungurahua, Ecuador",
+      "phone": "+593-3-245-9999",
+      "website": "https://celite.edu.ec",
+      "image": "images/celite-logo.svg",
+      "membershipLevel": 1,
+      "industry": "Educación",
+      "email": "info@celite.edu.ec",
+      "description": "Institución educativa que ofrece primaria y secundaria en Ambato."
+    }
+  ]
+}

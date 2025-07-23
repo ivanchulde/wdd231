@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/courses.js" defer></script>
+    <script src="scripts/main.js" defer></script>
     <link rel="icon" href="favicon.ico" />
 
     
@@ -32,13 +32,19 @@
         <button type="button" id="menu" class="hamburguer"></button>
         <ul class="navigation">
                 <a href="index.html" id="home">Home</a>
-                <a href="chamber.html" id="about">Chamber</a>
-                <a href="final.html" id="contact">Final</a>
+                <a href="directory.html" id="directory">Directory</a>
+                <a href="join.html" id="join">Join</a>
+                <a href="discover.html" id="discover">Discover</a>
         </ul>
     </header>
     
     <main>
-        <h1>CHAMBER</h1>
+
+        <div class="menu">
+		    <button id="grid">Grid</button>
+		    <button id="list">List</button>
+	    </div>
+        <div id="cards" class="grid"></div>
     </main>
     <footer class="modern-footer">
         <div class="footer-top">
