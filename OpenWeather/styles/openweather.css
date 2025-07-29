@@ -1,0 +1,43 @@
+:root {
+    --color-primary: #0D1B2A;
+    /* Header and footer */
+    --color-secondary: #778DA9;
+    /* Secondary elements */
+    --color-accent: #415A77;
+    /* Navigation */
+    --color-background: #E0E1DD;
+    /* Body background */
+    --color-white: #FFFFFF;
+    /* Text in header/footer */
+    --color-hover: #bbb;
+    /* Hover background */
+    --color-hover-text: #333;
+    /* Hover text */
+}
+
+
+.card {
+    border: 1px solid #5d6f67;
+    background-color: var(--color-background);
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.card h2 {
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+    
+}
+
+.card #description {
+    text-transform: capitalize;
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+}
+
+.card #temperature {
+    font-size: 2rem;
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+}
