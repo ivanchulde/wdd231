@@ -316,3 +316,192 @@ main {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+/*-----------HOME PAGE STYLES-----------*/
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 25%;
+    z-index: -1;
+    
+}
+
+.hero h1, 
+.services-gallery h1 {
+    font-size: 3rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(black  );
+    margin-bottom: 2rem;
+}
+
+.hero button,
+.services-gallery button{
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover,
+.values-section button:hover {
+    background-color: var(--color-secondary);
+}
+
+
+/*-----------FEATURES STYLES IN INDEX-----------*/
+
+.features {
+    margin: 2rem auto;;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1rem;
+    
+
+}
+
+.features section {
+    border: 1px solid #5d6f67;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.features section:hover {
+    transform: scale(1.02);
+    background-color: var(--color-hover);
+    color: var(--color-hover-text);
+}
+
+#events ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+.features p, .features h2, .features h3 {
+    text-transform: capitalize;
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+}
+
+.features #temperature {
+    font-size: 2rem;
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+}
+
+
+
+
+/*-----------Temperature CARD STYLES-----------*/
+
+#card-weather h2 {
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+    
+}
+
+#card-weather #description {
+    text-transform: capitalize;
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+}
+
+#card-weather #temperature {
+    font-size: 2rem;
+    color: var(--color-hover-text);
+    margin: .3rem 0;
+}
+
+
+/*-----------Spotlights STYLES-----------*/
+.spotlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;           /* Espacio entre las cards */
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.spotlight-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  width: 300px;       /* Ancho fijo para cada card */
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.2);
+}
+
+.spotlight-card img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 4px;
+}
+
+.spotlight-card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.spotlight-card p {
+  font-size: 1rem;
+  margin: 5px 0;
+  color: #555;
+}
+
+.spotlight-card a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #1e90ff;
+  font-weight: 600;
+}
+
+.spotlight-card a:hover {
+  text-decoration: underline;
+}

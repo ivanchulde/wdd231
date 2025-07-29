@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber of Commerce Directory</title>
+    <title>ANIV Chamber of Commerce</title>
     <meta name="author" content="Ivan Chulde"/>
-    <meta name="description" content="Discover local businesses and services in the Chamber of Commerce Directory. Connect, grow, and explore opportunities in your community." />
+    <meta name="description" content="Discover the ANIV Chamber of Commerce: business directory, membership, and resources for Ambato, Ecuador. Connect, grow, and explore local opportunities." />
     <!------Font------------>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,12 +19,13 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <script src="scripts/main.js" defer></script>
+    <script src="scripts/openweather.js" defer></script>
+    <script src="scripts/indexCompanies.js" defer></script>
     <link rel="icon" href="favicon.ico" />
 
     <!------------META TAGS-------------------->
-    <meta property="og:title" content="Chamber of Commerce Directory | Ivan Chulde" />
-    <meta property="og:description" content="Explore the directory of businesses and services in the Chamber of Commerce." />
+    <meta property="og:title" content="ANIV Chamber of Commerce | Ivan Chulde" />
+    <meta property="og:description" content="Explore the directory of businesses and services in the ANIV Chamber of Commerce." />
     <meta property="og:image" content="https://ivanchulde.github.io/wdd231/chamber/images/logo.webp" />
     <meta property="og:url" content="https://ivanchulde.github.io/wdd231/chamber/" />
 
@@ -43,12 +44,43 @@
     </header>
     
     <main>
-        <h1>Chamber of Commerce Directory</h1>
-        <div class="menu">
-		    <button id="grid">Grid</button>
-		    <button id="list">List</button>
-	    </div>
-        <div id="cards" class="grid"></div>
+        <h1>Home</h1>
+        <div class="hero">
+            <h1>Welcome to ANIV Chamber of Commerce</h1>
+            <p>
+                The ANIV Chamber of Commerce connects local businesses, fosters economic growth, and provides resources for entrepreneurs and the community in Ambato. Join us to network, collaborate, and discover new opportunities.
+            </p>
+            <button class="hero-btn" onclick="location.href='join.html'">Contact Us</button>
+            <img src="images/hero-chamber.webp" alt="ANIV Ingenieria Impact" style="max-width:100%;height:auto;" loading="lazy">
+        </div>
+        <div class="features">
+            <section id="events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Event 1: Networking Breakfast - 25-7-2025</li>
+                    <li>Event 2: Business Workshop - 26-11-2025</li>
+                    <li>Event 3: Community Fair - 27-12-2025</li>
+                </ul>
+            </section>
+            <section id="card-weather">
+                    <h2>Current Weather</h2>
+                    <h2 id="town"></h2>
+                    <img id="graphic" src="" alt="">
+                    <p id="description"></p>
+                    <p id="temperature"></p>
+                    
+            </section>
+            <section id="card-forecast">
+                    <h2>Weather Forecast</h2>
+                    <p id="today"></p>
+                    <p id="day2"></p>
+                    <p id="day4"></p>
+            </section>
+        </div>
+        
+        <div id="spotlights" class="spotlights">
+
+        </div>
     </main>
     <footer class="modern-footer">
         <div class="footer-top">
