@@ -354,7 +354,7 @@ main {
 
 .hero p {
     font-size: 1.2rem;
-    color: var(black  );
+    color: var(--color-primary);
     margin-bottom: 2rem;
 }
 
