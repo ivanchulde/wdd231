@@ -27,7 +27,6 @@ async function apiFetchForecast() {
     const response = await fetch(myForecastUrl);
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
       displayForecast(data);
     } else {
       throw Error(await response.text());
