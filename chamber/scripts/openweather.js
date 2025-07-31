@@ -46,7 +46,7 @@ function getDayNameFromTimestamp(timestamp) {
 //DISPLAY THE JASON DATA ONTO THE HTML WEB PAGE
 
 function displayForecast(data) { 
-    console.log("hello");
+    
     myTown.innerHTML = data.city.name
     myDescription.innerHTML = data.list[0].weather[0].description
     myTemperature.innerHTML = `${data.list[0].main.temp}&deg;C`
