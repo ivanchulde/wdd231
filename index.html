@@ -20,6 +20,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/courses.js" defer></script>
+    
 
     <!------------META TAGS-------------------->
     <meta property="og:title" content="IVAN CHULDE | ANIV INGENIERIA" />
@@ -45,45 +46,50 @@
     <main >
         <h1>ANIV INGENIERIA</h1>
         <div class="container">
-        <section class="about-me">
-            <h2>About Me</h2>
-                <p>My name is Iván Chulde. I was born in Puyo, Ecuador, and I currently live in Ambato. 
-                I am an Electronics and Communications Engineer, and I work as the Zonal Director of Technology and Support at ECU 911. 
-                I am happily married and have a passion for technology.</p>
+            <section class="about-me">
+                <h2>About Me</h2>
+                    <p>My name is Iván Chulde. I was born in Puyo, Ecuador, and I currently live in Ambato. 
+                    I am an Electronics and Communications Engineer, and I work as the Zonal Director of Technology and Support at ECU 911. 
+                    I am happily married and have a passion for technology.</p>
+                    
+                    
+            
+                <h3>Ambato, Ecuador</h3>
+                <div class="city">
+                    <img src="images/profile.jpg" alt="Ivan Chulde" width="200">
+                    <p>Ambato is a vibrant city located in the central highlands of Ecuador, known for its beautiful landscapes, rich culture, and economic vitality. 
+                    It is often referred to as the “City of Flowers and Fruits” and is famous for its annual festival celebrating these gifts of nature. 
+                    Ambato is also an important hub for commerce, education, and industry in the region.
+                </p>
+                </div>
+            </section>
+
+            <section class="student-photo">
+                    <h2>Company</h2>
+                    <div class="photo">
+                        <p>ANIV Engineering was founded on June 4th, 2020, born from a vision to make technology more accessible and reliable for everyone. What started as a small initiative focused on the sale and maintenance of computers quickly grew into a trusted name in tech services.</p>                
+                        <img src="images/logo.png" alt="ANIV History Image" loading="lazy" />
+                        <p>Over the years, ANIV has expanded its services to include network setup and infrastructure, evolving with the ever-changing demands of the digital world. Our commitment to education led us to partner with schools and universities, offering tutoring, tech support, and mentorship for students and academic institutions. Today, ANIV stands as a bridge between people and technology, empowering learning and innovation.</p>
+                    </div>
+            </section>
+
+            <section class="courses">
+                <h2>Web Certificates Courses</h2>
+                <div class="courses-list">
+                    <button type="button" id="all" class="courses-btn">All</button>
+                    <button type="button" id="cse" class="courses-btn">CSE</button>
+                    <button type="button" id="wdd" class="courses-btn">WDD</button>
+
+                </div>
+                <div class="courses-approved"></div>
                 
-                
-           
-            <h3>Ambato, Ecuador</h3>
-            <div class="city">
-                <img src="images/profile.jpg" alt="Ivan Chulde" width="200">
-                <p>Ambato is a vibrant city located in the central highlands of Ecuador, known for its beautiful landscapes, rich culture, and economic vitality. 
-                It is often referred to as the “City of Flowers and Fruits” and is famous for its annual festival celebrating these gifts of nature. 
-                Ambato is also an important hub for commerce, education, and industry in the region.
-            </p>
-            </div>
-        </section>
 
-       <section class="student-photo">
-            <h2>Company</h2>
-            <div class="photo">
-                <p>ANIV Engineering was founded on June 4th, 2020, born from a vision to make technology more accessible and reliable for everyone. What started as a small initiative focused on the sale and maintenance of computers quickly grew into a trusted name in tech services.</p>                
-                <img src="images/logo.png" alt="ANIV History Image" loading="lazy" />
-                <p>Over the years, ANIV has expanded its services to include network setup and infrastructure, evolving with the ever-changing demands of the digital world. Our commitment to education led us to partner with schools and universities, offering tutoring, tech support, and mentorship for students and academic institutions. Today, ANIV stands as a bridge between people and technology, empowering learning and innovation.</p>
-            </div>
-        </section>
-
-        <section class="courses">
-            <h2>Web Certificates Courses</h2>
-            <div class="courses-list">
-                <button type="button" id="all" class="courses-btn">All</button>
-                <button type="button" id="cse" class="courses-btn">CSE</button>
-                <button type="button" id="wdd" class="courses-btn">WDD</button>
-
-            </div>
-           <div class="courses-approved"></div>
-
-        </section>
-    </div>
+            </section>
+            
+        <dialog id="dialogBox">
+            <div id="dialogContent"></div>
+            
+        </dialog>
     </main>
     <footer class="modern-footer">
         <div class="footer-top">

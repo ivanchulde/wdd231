@@ -79,9 +79,12 @@ const courses = [
 ];
 
 // ========= DOM =========
-const listContainer = document.querySelector('.courses-approved'); // contenedor de etiquetas
-const totalMsg      = document.createElement('p');
-totalMsg.classList.add('courses-count');          // ← solo clase
+const dialogBox = document.querySelector('#dialogBox');
+const closeButton = document.querySelector('#closeButton');
+const dialogBoxText = dialogBox.querySelector('div');
+const listContainer = document.querySelector('.courses-approved');
+const totalMsg = document.createElement('p');
+totalMsg.classList.add('courses-count');
 listContainer.parentElement.insertBefore(totalMsg, listContainer);
 
 // ========= Botones =========
@@ -89,35 +92,65 @@ const btnAll = document.getElementById('all');
 const btnWDD = document.getElementById('wdd');
 const btnCSE = document.getElementById('cse');
 
-// ========= Lógica =========
+// ========= Lógica principal =========
 function displayApprovedCourses(filter = 'All') {
-  listContainer.innerHTML = '';
+    listContainer.innerHTML = '';
 
-  // 1. cursos aprobados
-  let approved = courses.filter(c => c.completed);
+    // 1. cursos aprobados
+    let approved = courses.filter(c => c.completed);
 
-  // 2. filtro por materia
-  if (filter !== 'All') approved = approved.filter(c => c.subject === filter);
+    // 2. filtro por materia
+    if (filter !== 'All') {
+        approved = approved.filter(c => c.subject === filter);
+    }
 
-  // 3. total
-  totalMsg.textContent =
-    `The total number of approved courses listed below is ${approved.length}`;
+    // 3. total
+    totalMsg.textContent = `The total number of approved courses listed below is ${approved.length}`;
 
-  // 4. etiquetas
-  approved.forEach(({ subject, number }) => {
-    const tag = document.createElement('span');
-    tag.textContent = `${subject} ${number}`;
-    tag.classList.add('course-tag');              // ← solo clase
-    listContainer.appendChild(tag);
-  });
+    // 4. etiquetas (tags) y eventos
+    approved.forEach(course => {
+        const tag = document.createElement('span');
+        tag.textContent = `${course.subject} ${course.number}`;
+        tag.classList.add('course-tag');
+
+        // Al hacer clic, mostrar el diálogo con info del curso
+        tag.addEventListener('click', () => displayCourseDetails(course));
+
+        listContainer.appendChild(tag);
+    });
 }
 
-// ========= Listeners =========
+// ========= Mostrar diálogo con la info del curso =========
+function displayCourseDetails(course) {
+  dialogBox.innerHTML = ''; // Limpia contenido previo
+  dialogBox.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+  `;
+  dialogBox.showModal();
+
+  const closeModal = document.getElementById('closeModal');
+  closeModal.addEventListener('click', () => dialogBox.close());
+}
+
+// Cerrar diálogo si se hace clic fuera del contenido interno (backdrop)
+dialogBox.addEventListener('click', (event) => {
+  if (event.target === dialogBox) {
+    dialogBox.close();
+  }
+});
+
+// ========= Botones =========
 btnAll.addEventListener('click', () => displayApprovedCourses('All'));
 btnWDD.addEventListener('click', () => displayApprovedCourses('WDD'));
 btnCSE.addEventListener('click', () => displayApprovedCourses('CSE'));
 
 // ========= Mensaje inicial =========
 window.addEventListener('DOMContentLoaded', () => {
-  totalMsg.textContent = 'Select a button to view your approved courses.';
+    totalMsg.textContent = 'Select a button to view your approved courses.';
 });
