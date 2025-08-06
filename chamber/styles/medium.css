@@ -1,4 +1,4 @@
-@media only screen and (min-width: 64rem){
+@media only screen and (min-width: 38rem){
     header, main, nav, footer {
         max-width: 1200px;
         margin: 0 auto;
@@ -36,7 +36,7 @@
         "about photo"
         "courses courses";
         padding: 1rem;
-}
+    }
 
     .courses {
         grid-column: 1 / -1;
@@ -61,10 +61,21 @@
         transition: background-color 0.3s ease;
         width: 150px;
     }
-
-    #allplaces {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+    
+    
+    /*----------DiSCOVERY PAGE STYLES-----------*/
+    #allplaces div {
+    
+    grid-template-areas: 
+    "photograph name"
+    "photograph description"
+    "photograph location";
     }
-
+    #allplaces div img {
+        width: 300px;
+    }
+    #allplaces div img:hover {
+    filter: blur(3px);
+    transition: filter 0.3s ease;
+  }
 }

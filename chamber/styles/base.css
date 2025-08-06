@@ -747,3 +747,64 @@ form input[type="submit"]:hover {
   background-color: var(--color-hover);
   color: var(--color-hover-text);
 }
+
+
+
+/*----------DiSCOVERY PAGE STYLES-----------*/
+#allplaces div {
+  margin: 1rem 8px;
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas: 
+  "name"
+  "photograph"
+  "description"
+  "location";
+  align-items: center;
+}
+
+#allplaces div h2{
+  margin: 1rem 10px;
+  grid-area: name;
+  text-align: center;
+}
+
+#allplaces div img {
+  width: 100%;
+  grid-area: photograph;
+  padding: 0.5rem;
+}
+
+#allplaces div p {
+  margin: 1rem 10px;
+  grid-area: description;
+}
+
+#allplaces div address {
+  margin: 1rem 10px;
+  grid-area: location;
+}
+
+#allplaces button {
+  margin: 0.5rem auto 1rem auto;
+  padding: 0.5rem 2rem;
+  background-color: var(--color-accent);
+  font-weight: 700;
+  color: var(--color-white);
+  border: none;
+  border-radius: 15px;
+}
+
+.sidebar-message {
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 1rem;
+    margin: 1rem;
+    border-left: 4px solid #0077cc;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+}
+

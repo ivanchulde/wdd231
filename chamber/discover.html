@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Chamber of Commerce</title>
+    <meta name="author" content="Ivan Chulde"/>
+    <meta name="description" content="Discover the ANIV Chamber of Commerce: business directory, membership, and resources for Ambato, Ecuador. Connect, grow, and explore local opportunities." />
+    <!------Font------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!------Style Sheets && Scripts------------>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/discover.js" type="module" defer></script>
+    <link rel="icon" href="favicon.ico" />
+
+    <!------------META TAGS-------------------->
+    <meta property="og:title" content="ANIV Chamber of Commerce | Ivan Chulde" />
+    <meta property="og:description" content="Explore the directory of businesses and services in the ANIV Chamber of Commerce." />
+    <meta property="og:image" content="https://ivanchulde.github.io/wdd231/chamber/images/logo.webp" />
+    <meta property="og:url" content="https://ivanchulde.github.io/wdd231/chamber/" />
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="logo" id="logo"  loading="lazy">
+        <span>ANIV INGENIERIA</span>
+        <button type="button" id="menu" class="hamburguer"></button>
+        <ul class="navigation">
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="directory.html" id="directory">Directory</a></li>
+                <li><a href="join.html" id="join">Join</a></li>
+                <li class="current"><a href="#" id="discover">Discover</a></li>
+        </ul>
+    </header>
+    
+    <main>
+        <h1>Discover</h1>
+        <div id="allplaces" class="grid"></div>
+        <div id="visit-message" class="sidebar-message"></div>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-top">
+            <img src="images/logo.webp" alt="Logo ANIV" class="footer-logo" loading="lazy">
+            <nav class="footer-links">
+                <a href="chamber.html" id="about">Chamber</a>
+                <a href="final.html" id="contact">Final</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://wa.me/+593982322923" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="images/whatsapp-icon.svg" alt="WhatsApp Icon"></a>
+                <a href="https://www.linkedin.com/in/ivan-chulde-62a89119a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn Icon"></a>
+                <a href="https://www.youtube.com/@aniv1561" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/youtube-icon.svg" alt="YouTube Icon"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Ivan Chulde  | Ambato-Ecuador.</p>
+            <p>Last Modified in: <span id="lastModified"></span></p>
+            <div class="footer-policies">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
