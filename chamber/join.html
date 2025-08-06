@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ANIV Chamber of Commerce</title>
+    <title>Join Chamber of Commerce</title>
     <meta name="author" content="Ivan Chulde"/>
     <meta name="description" content="Discover the ANIV Chamber of Commerce: business directory, membership, and resources for Ambato, Ecuador. Connect, grow, and explore local opportunities." />
     <!------Font------------>
@@ -20,6 +20,7 @@
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/join.js" defer></script>
     <link rel="icon" href="favicon.ico" />
 
     <!------------META TAGS-------------------->
@@ -37,14 +38,108 @@
         <ul class="navigation">
                 <li><a href="index.html" id="home">Home</a></li>
                 <li><a href="directory.html" id="directory">Directory</a></li>
-                <li><a href="join.html" id="join">Join</a></li>
+                <li class="current"><a href="#" id="join">Join</a></li>
                 <li><a href="discover.html" id="discover">Discover</a></li>
         </ul>
     </header>
     
     <main>
-        <h1>Join</h1>
-        
+        <h1>Join Our Chamber</h1>
+        <div class="form-and-cards">
+            <form method="get" action="thankyou.html">
+                <input type="hidden" id="timestamp" name="timestamp">
+
+                <label title="Enter your first name">
+                First Name:
+                <input type="text" name="firstName" title="Enter your first name" required autocomplete="given-name">
+                </label>
+
+                <label title="Enter your last name">
+                Last Name:
+                <input type="text" name="lastName" title="Enter your last name" required autocomplete="family-name">
+                </label>
+
+                <label title="Enter your organizational title">
+                Organizational Title:
+                <input type="text" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\-\s]{7,}">
+                </label>
+
+                <label title="Enter your email address">
+                Email Address:
+                <input type="email" name="email" title="Enter your email address" required autocomplete="email" placeholder="example@email.com">
+                </label>
+
+                <label title="Enter your mobile phone number">
+                Mobile Phone Number:
+                <input type="tel" name="phone" title="Enter your mobile number" required autocomplete="tel">
+                </label>
+
+                <label title="Enter your business or organization name">
+                Business/Organization Name:
+                <input type="text" name="organization" title="Enter your business or organization name" required autocomplete="organization">
+                </label>
+
+                <label title="Select a membership level">
+                Membership Level:
+                <select name="membership" required>
+                    <option value="">Select...</option>
+                    <option value="np">NP Membership (Non Profit, No Fee)</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+                </label>
+
+                <label title="Describe your business or organization">
+                Business/Organization Description:
+                <textarea name="description" title="Describe your business or organization" rows="4"></textarea>
+                </label>
+
+                <input type="submit" value="Join Now">
+            </form>
+
+            <section class="membership-cards">
+                <div class="membership-card">
+                    <h3>Non Profit Membership Level</h3>
+                    <button type="button" onclick="openModal('npModal')">Learn More</button>
+                    </div>
+                    <div class="membership-card">
+                    <h3>Bronze Membership Level</h3>
+                    <button type="button" onclick="openModal('bronzeModal')">Learn More</button>
+                    </div>
+                    <div class="membership-card">
+                    <h3>Silver Membership Level</h3>
+                    <button type="button" onclick="openModal('silverModal')">Learn More</button>
+                    </div>
+                    <div class="membership-card">
+                    <h3>Gold Membership Level</h3>
+                    <button type="button" onclick="openModal('goldModal')">Learn More</button>
+                </div>
+            </section>
+        </div>
+          <!-- Membership Modals -->
+        <div id="npModal" class="modal">
+            <h2>NP Membership Benefits</h2>
+            <ul><li>No fee for non-profits</li><li>Basic listing</li><li>Community newsletter</li></ul>
+            <button onclick="closeModal()">Close</button>
+        </div>
+        <div id="bronzeModal" class="modal">
+            <h2>Bronze Membership Benefits</h2>
+            <ul><li>All NP benefits</li><li>Event invitations</li></ul>
+            <button onclick="closeModal()">Close</button>
+        </div>
+        <div id="silverModal" class="modal">
+            <h2>Silver Membership Benefits</h2>
+            <ul><li>All Bronze benefits</li><li>Training sessions</li><li>Discounts on events</li></ul>
+            <button onclick="closeModal()">Close</button>
+        </div>
+        <div id="goldModal" class="modal">
+            <h2>Gold Membership Benefits</h2>
+            <ul><li>All Silver benefits</li><li>Homepage spotlight</li><li>Top-tier advertising</li></ul>
+            <button onclick="closeModal()">Close</button>
+        </div>
+        <div id="modalBackdrop" class="modal-backdrop" onclick="closeModal()"></div>
+
     </main>
     <footer class="modern-footer">
         <div class="footer-top">
