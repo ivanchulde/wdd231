@@ -1,0 +1,55 @@
+:root {
+  --color-primary: #0D1B2A; /* for header and footer */
+  --color-secondary: #778DA9; /* for secondary elements */
+  --color-accent: #415A77; /* for navigation */
+  --color-background: #E0E1DD;  /* for body background */
+  --color-white: #FFFFFF;   /* for text in header and footer */
+  
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 20px;
+    text-align: center;
+    
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.wireframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.wireframe-container img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
