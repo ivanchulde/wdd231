@@ -1,0 +1,86 @@
+@media only screen and (min-width: 64rem){
+    header, main, nav, footer {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    header {
+        display: grid;
+        grid-template-columns: 50px auto;
+        
+        
+    }
+
+    .navigation {
+        
+        grid-column: 1 / -1;  
+        display: flex;
+    }
+
+
+    .navigation a {
+		display: inline;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+	}     
+    .hamburguer {
+        display: none;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        grid-template-areas:
+        "about photo"
+        "courses courses";
+        padding: 1rem;
+}
+
+    .courses {
+        grid-column: 1 / -1;
+        
+    }
+
+    .courses-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+    
+    .courses-btn{
+        background-color: var(--color-accent);
+        color: white;
+        border: none;
+        padding: 0.75rem;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        width: 150px;
+    }
+
+    #allplaces {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .membership-cards {
+        flex: 1 1 200px;
+        max-width: 350px;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* columnas más grandes */
+        gap: 2rem;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .form-and-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+}

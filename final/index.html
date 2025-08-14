@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANIV Missionary Store</title>
+    <meta name="author" content="Ivan Chulde"/>
+    <meta name="description" content="Discover the ANIV Missionary Store: a unique shopping experience for all your missionary needs. Explore our products, resources, and community support." />
+    <!------Font------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    
+
+
+    <!------Style Sheets && Scripts------------>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/openweather.js" defer></script>
+    <script src="scripts/indexCompanies.js" defer></script>
+    <link rel="icon" href="favicon.ico" />
+
+    <!------------META TAGS-------------------->
+    <meta property="og:title" content="ANIV Missionary Store | Ivan Chulde" />
+    <meta property="og:description" content="Online shopping for all your missionary needs in Ecuador" />
+    <meta property="og:image" content="https://ivanchulde.github.io/wdd231/final/images/logo.webp" />
+    <meta property="og:url" content="https://ivanchulde.github.io/wdd231/final/" />
+
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="logo" id="logo" >
+        <span>ANIV Missionary Store</span>
+        <button type="button" id="menu" class="hamburguer"></button>
+        <ul class="navigation">
+                <li class = "current"><a href="#" id="home">Home</a></li>
+                <li><a href="store.html" id="store">Online Store</a></li>
+                <li><a href="info.html" id="info">Information</a></li>
+                
+        </ul>
+    </header>
+    
+    <main>
+        <h1>Home</h1>
+        <div class="hero">
+            <h1>Welcome to ANIV Missionary Store</h1>
+            <p>
+                The ANIV Missionary Store offers a unique shopping experience for all your missionary needs. Explore our products, resources, and community support.
+            </p>
+            <button class="hero-btn" onclick="location.href='store.html'">Go Shopping</button>
+            <img src="images/hero-store.webp" alt="ANIV Ingenieria Impact" class="hero-image">
+
+        </div>
+        <div class="features">
+            <section id="events">
+                <h2>Upcoming Events</h2>
+                <ul>
+                    <li>Event 1: Networking Breakfast - 25-7-2025</li>
+                    <li>Event 2: Business Workshop - 26-11-2025</li>
+                    <li>Event 3: Community Fair - 27-12-2025</li>
+                </ul>
+            </section>
+            <section id="card-weather">
+                    <h2>Current Weather</h2>
+                    <h2 id="town"></h2>
+                    <img id="graphic" src="" alt="">
+                    <p id="description"></p>
+                    <p id="temperature"></p>
+                    
+            </section>
+            <section id="card-forecast">
+                    <h2>Weather Forecast</h2>
+                    <p id="today"></p>
+                    <p id="day2"></p>
+                    <p id="day4"></p>
+            </section>
+        </div>
+        
+        <div id="spotlights" class="spotlights">  
+        </div>
+    </main>
+    <footer class="modern-footer">
+        <div class="footer-top">
+            <img src="images/logo.webp" alt="Logo ANIV" class="footer-logo">
+            <nav class="footer-links">
+                <a href="info.html" id="info">Info</a>
+                <a href="store.html" id="store">Store</a>
+            </nav>
+            <div class="footer-social">
+                <a href="https://wa.me/+593982322923" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><img src="images/whatsapp-icon.svg" alt="WhatsApp Icon"></a>
+                <a href="https://www.linkedin.com/in/ivan-chulde-62a89119a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn Icon"></a>
+                <a href="https://www.youtube.com/@aniv1561" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="images/youtube-icon.svg" alt="YouTube Icon"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Ivan Chulde  | Ambato-Ecuador.</p>
+            <p>Last Modified in: <span id="lastModified"></span></p>
+            <div class="footer-policies">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
